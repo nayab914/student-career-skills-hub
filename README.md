@@ -23,6 +23,7 @@ Technologies Used
 
  How to Run
 
+You can view the live project directly here: [Student Career & Skills Hub](https://nayab914.github.io/student-career-skills-hub/)
 1. Download or clone this repository.
 2. Open the project folder.
 3. Double-click `index.html` to open the website in your browser.
