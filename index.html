@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Career & Skills Hub</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🎓 Student Career & Skills Hub</h1>
+        <p id="openStatus"></p>
+        <p>Learn. Build. Grow.</p>
+        <button id="themeButton" type="button">
+            Toggle Light/Dark Mode
+        </button>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#courses">Courses</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="home">
+            <div class="hero">
+                <div class="hero-text">
+                    <h2>Build Your Future</h2>
+                    <p id="greeting" class="output"></p>
+                    <p>
+                        Welcome to the
+                        <strong>Student Career & Skills Hub</strong>.
+                        This website helps students discover important
+                        technical skills and courses for their future careers.
+                    </p>
+                    <p>
+                        Start learning today and develop skills that can help
+                        you become a successful professional.
+                    </p>
+                    <a href="#courses" class="btn">
+                        Explore Courses
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        Join the Community
+                    </a>
+                </div>
+                <img
+                    src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80"
+                    alt="Student working on a laptop"
+                >
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <h3>📘 4</h3>
+                    <p>Courses</p>
+                </div>
+                <div class="stat">
+                    <h3>⏱ 38</h3>
+                    <p>Weeks of Learning</p>
+                </div>
+                <div class="stat">
+                    <h3>🛠 3</h3>
+                    <p>Popular Skill Paths</p>
+                </div>
+                <div class="stat">
+                    <h3>🚀 5</h3>
+                    <p>Roadmap Steps</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Popular Skills</h2>
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=700&q=80"
+                    alt="Code displayed on a computer monitor"
+                >
+                <div class="card-body">
+                    <h3>Programming</h3>
+                    <p>
+                        Learn programming languages such as
+                        <strong>C++</strong> and Python to develop
+                        problem-solving and software development skills.
+                    </p>
+                    <p id="extraInfo" style="display: none;">
+                        Programming also helps students build logical thinking,
+                        problem-solving abilities and real-world software
+                        projects. Start with small programs and gradually
+                        develop larger projects.
+                    </p>
+                    <button id="readMoreButton" type="button">
+                        Read More
+                    </button>
+                    <br><br>
+                    <a href="https://www.python.org">
+                        Learn Python
+                    </a>
+                </div>
+            </article>
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=700&q=80"
+                    alt="Laptop showing website code on a desk"
+                >
+                <div class="card-body">
+                    <h3>Web Development</h3>
+                    <p>
+                        Learn how websites are created using HTML and CSS.
+                        Build clean and attractive web pages.
+                    </p>
+                    <a href="https://developer.mozilla.org">
+                        Learn Web Development
+                    </a>
+                </div>
+            </article>
+            <article>
+                <img
+                    src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=700&q=80"
+                    alt="Digital padlock representing cybersecurity"
+                >
+                <div class="card-body">
+                    <h3>Cybersecurity</h3>
+                    <p>
+                        Understand networks, security concepts and
+                        ethical hacking to protect computer systems.
+                    </p>
+                    <a href="https://www.cisa.gov">
+                        Learn Cybersecurity
+                    </a>
+                </div>
+            </article>
+            <aside>
+                <h3>💡 Career Tip</h3>
+                <p>
+                    <em>Practice is just as important as learning.</em>
+                    Try to build small projects while learning new skills.
+                </p>
+            </aside>
+        </section>
+        <section id="roadmap">
+            <h2>Learning Roadmap</h2>
+            <p>
+                Follow these steps to improve your technical skills:
+            </p>
+            <div class="roadmap-layout">
+                <div>
+                    <ol>
+                        <li>Learn the basics</li>
+                        <li>Practice regularly</li>
+                        <li>Build small projects</li>
+                        <li>Build a portfolio</li>
+                        <li>Apply for opportunities</li>
+                    </ol>
+                </div>
+                <div>
+                    <h3>Important Skills</h3>
+                    <ul>
+                        <li>Programming</li>
+                        <li>Problem Solving</li>
+                        <li>Communication</li>
+                        <li>Teamwork</li>
+                        <li>Cybersecurity Awareness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="courses">
+            <h2>Available Courses</h2>
+            <div class="filter-buttons">
+                <button type="button" data-filter="all">
+                    All
+                </button>
+                <button type="button" data-filter="programming">
+                    Programming
+                </button>
+                <button type="button" data-filter="web">
+                    Web
+                </button>
+                <button type="button" data-filter="security">
+                    Cybersecurity
+                </button>
+            </div>
+            <div class="table-wrap">
+                <table id="courseTable">
+                    <caption>
+                        Student Skills Courses
+                    </caption>
+                    <thead>
+                        <tr>
+                            <th>Select</th>
+                            <th>Course</th>
+                            <th>Duration</th>
+                            <th>Level</th>
+                            <th>Focus</th>
+                            <th>Fee</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr data-category="programming">
+                            <td>
+                                <input
+                                    type="checkbox"
+                                    class="course-check"
+                                    data-price="30"
+                                >
+                            </td>
+                            <td>C++ Programming</td>
+                            <td>8 Weeks</td>
+                            <td>Beginner</td>
+                            <td>Programming</td>
+                            <td>$30</td>
+                        </tr>
+                        <tr data-category="web">
+                            <td>
+                                <input
+                                    type="checkbox"
+                                    class="course-check"
+                                    data-price="40"
+                                >
+                            </td>
+                            <td>Web Development</td>
+                            <td>10 Weeks</td>
+                            <td>Beginner</td>
+                            <td>Web</td>
+                            <td>$40</td>
+                        </tr>
+                        <tr data-category="security">
+                            <td>
+                                <input
+                                    type="checkbox"
+                                    class="course-check"
+                                    data-price="50"
+                                >
+                            </td>
+                            <td>Cybersecurity</td>
+                            <td>12 Weeks</td>
+                            <td>Intermediate</td>
+                            <td>Security</td>
+                            <td>$50</td>
+                        </tr>
+                        <tr data-category="programming">
+                            <td>
+                                <input
+                                    type="checkbox"
+                                    class="course-check"
+                                    data-price="30"
+                                >
+                            </td>
+                            <td>Python Programming</td>
+                            <td>8 Weeks</td>
+                            <td>Beginner</td>
+                            <td>Programming</td>
+                            <td>$30</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="6">
+                                Choose courses according to your career goals.
+                            </td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+            <p id="total" class="output">
+                Total: $0
+            </p>
+            <div class="actions">
+                <button
+                    type="button"
+                    onclick="showTotalWeeks()"
+                >
+                    Total Weeks of All Courses
+                </button>
+                <button
+                    type="button"
+                    onclick="planStudyTime()"
+                >
+                    Plan My Study Time
+                </button>
+            </div>
+            <p id="totalWeeks" class="output"></p>
+            <p id="studyPlan" class="output"></p>
+        </section>
+        <section id="contact">
+            <h2>Join Our Learning Community</h2>
+            <p>
+                Fill out the form below to register your interest
+                in a course.
+            </p>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <h3>Why join?</h3>
+                    <ul>
+                        <li>A clear learning roadmap</li>
+                        <li>Beginner-friendly courses</li>
+                        <li>Project ideas to practice</li>
+                        <li>Skills for your future career</li>
+                    </ul>
+                </div>
+                <form id="contactForm">
+                    <label for="name">
+                        Full Name:
+                    </label>
+                    <br>
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                    >
+                    <br><br>
+                    <label for="email">
+                        Email:
+                    </label>
+                    <br>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                    >
+                    <br><br>
+                    <label for="birth-year">
+                        Birth Year:
+                    </label>
+                    <br>
+                    <input
+                        type="text"
+                        id="birth-year"
+                        name="birth-year"
+                        placeholder="e.g. 2002"
+                    >
+                    <p id="ageMessage" class="output"></p>
+                    <br>
+                    <label for="course">
+                        Course Name:
+                    </label>
+                    <br>
+                    <input
+                        type="text"
+                        id="course"
+                        name="course"
+                        placeholder="Enter course name"
+                    >
+                    <br><br>
+                     <p>
+                        Choose your study level:
+                    </p>
+                    <input
+                        type="radio"
+                        id="beginner"
+                        name="level"
+                    >
+                    <label for="beginner">
+                        Beginner
+                    </label>
+                    <br>
+                    <input
+                        type="radio"
+                        id="intermediate"
+                        name="level"
+                    >
+                    <label for="intermediate">
+                        Intermediate
+                    </label>
+                    <br>
+                    <input
+                        type="radio"
+                        id="advanced"
+                        name="level"
+                    >
+                    <label for="advanced">
+                        Advanced
+                    </label>
+                    <br><br>
+                    <p>
+                        Select your interests:
+                    </p>
+                    <input
+                        type="checkbox"
+                        id="programming"
+                        name="interest"
+                    >
+                    <label for="programming">
+                        Programming
+                    </label>
+                    <br>
+                    <input
+                        type="checkbox"
+                        id="web"
+                        name="interest"
+                    >
+                    <label for="web">
+                        Web Development
+                    </label>
+                    <br>
+                    <input
+                        type="checkbox"
+                        id="security"
+                        name="interest"
+                    >
+                    <label for="security">
+                        Cybersecurity
+                    </label>
+                    <br><br>
+                    <label for="message">
+                        Your Message:
+                    </label>
+                    <br>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Write your message here"
+                    ></textarea>
+                    <br><br>
+                    <label for="special-notes">
+                        Special Notes:
+                    </label>
+                    <br>
+                    <textarea
+                        id="special-notes"
+                        name="special-notes"
+                        maxlength="100"
+                        placeholder="Write any special instructions..."
+                    ></textarea>
+                    <p id="charCount">
+                        100 characters remaining
+                    </p>
+                    <br>
+                    <button type="submit">
+                        Register
+                    </button>
+                    <button type="reset">
+                        Reset
+                    </button>
+                </form>
+            </div>
+            <p
+                id="registerMessage"
+                class="output"
+            ></p>
+        </section>
+    </main>
+    <footer>
+        <h3>
+            Student Career & Skills Hub
+        </h3>
+        <p>
+            Learn new skills and prepare for your future career.
+        </p>
+        <nav>
+            <a href="#skills">
+                Skills
+            </a>
+            <a href="#roadmap">
+                Roadmap
+            </a>
+            <a href="#courses">
+                Courses
+            </a>
+            <a href="#contact">
+                Contact
+            </a>
+        </nav>
+        <small>
+            &copy; 2026 Student Career & Skills Hub.
+            All rights reserved.
+        </small>
+        <br><br>
+        <a href="#home">
+            Back to Top
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
